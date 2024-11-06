@@ -41,6 +41,35 @@ describe('Wrong sign in formats', () => {
 
 })
 
+describe('correct sign in formats', () => {
+
+
+  it('correct email format 1', { timeout: 10000 },() => {
+    cy.visit("http://localhost:5173/login");
+    cy.get("#email").type("not a valid email");
+    cy.get("#password").type("Email-with.spicial_characters+~'!#$%&^*?@grambell.com");
+    cy.get("#login-btn").click();
+    cy.get("#error-email")
+    .should("exist") 
+    .then(() => {
+      cy.fail('email was correctly formatted');
+    });
+  })
+
+  it('correct email format 2', { timeout: 10000 },() => {
+    cy.visit("http://localhost:5173/login");
+    cy.get("#email").type("not a valid email");
+    cy.get("#password").type("EmailWithSpecialDomains@gram-bell.eg.edu");
+    cy.get("#login-btn").click();
+    cy.get("#error-email")
+    .should("exist") 
+    .then(() => {
+      cy.fail('email was correctly formatted');
+    });  })
+
+
+})
+
 
 describe('missing sign in fields', () => {
   it('email with no password', { timeout: 10000 },() => {
