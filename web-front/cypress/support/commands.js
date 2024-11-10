@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('GetToken', () => {
+    return cy.request({
+        method: 'POST',
+        url: 'https://webhook.site/token',
+
+    }).then((response) => {
+        const token = response.body;
+        return token.uuid;
+    })
+  })
+
