@@ -1,0 +1,720 @@
+{
+    "LoginForm": {
+      "emailInput": {
+        "id": "email"
+      },
+      "passwordInput": {
+        "id": "password"
+      },
+      "loginButton": {
+        "id": "login-btn"
+      },
+      "forgotPasswordLink": {
+        "id": "forgot-password-link"
+      },
+      "signUpLink": {
+        "id": "sign-up-link"
+      },
+      "loginError": {
+        "id": "error-login"
+      },
+      "googleLoginButton": {
+        "id": "googleBtn"
+      },
+      "githubLoginButton": {
+        "id": "githubBtn"
+      }
+    },
+    "ForgotPassword": {
+      "emailInput": {
+        "id": "email"
+      },
+      "sendResetEmailButton": {
+        "id": "send-reset-btn"
+      },
+      "backToLogin": {
+        "id": "back-to-login"
+      },
+      "errorInSendForgetEmail": {
+        "id": "error-forgot-password"
+      },
+      "errorInEmailInput": {
+        "id": "email-error"
+      }
+    },
+    "LoginForm": {
+    "emailInput": {
+      "id": "email"
+    },
+    "passwordInput": {
+      "id": "password"
+    },
+    "loginButton": {
+      "id": "login-btn"
+    },
+    "forgotPasswordLink": {
+      "id": "forgot-password-link"
+    },
+    "signUpLink": {
+      "id": "sign-up-link"
+    },
+    "loginError": {
+      "id": "error-login"
+    },
+    "googleLoginButton": {
+      "id": "googleBtn"
+    },
+    "githubLoginButton": {
+      "id": "githubBtn"
+    }
+  },
+  "ForgotPassword": {
+    "emailInput": {
+      "id": "email"
+    },
+    "sendResetEmailButton": {
+      "id": "send-reset-btn"
+    },
+    "backToLogin": {
+      "id": "back-to-login"
+    },
+    "errorInSendForgetEmail": {
+      "id": "error-forgot-password"
+    },
+    "errorInEmailInput": {
+      "id": "email-error"
+    }
+  },
+  "ResetPassword": {
+    "resetCodeInput": {
+      "id": "resetCode"
+    },
+    "passwordInput": {
+      "id": "password"
+    },
+    "confirmPasswordInput": {
+      "id": "confirmPassword"
+    },
+    "logoutAllCheckbox": {
+      "id": "logoutCheck"
+    },
+    "resetErrorMessage": {
+      "id": "error-reset"
+    },
+    "resetButton": {
+      "id": "reset-password-btn"
+    }
+  },
+  "SignupForm": {
+    "nameInput": {
+      "id": "name"
+    },
+    "usernameInput": {
+      "id": "userName"
+    },
+    "emailInput": {
+      "id": "email"
+    },
+    "passwordInput": {
+      "id": "password"
+    },
+    "confirmPasswordInput": {
+      "id": "confirmPassword"
+    },
+    "phoneInput": {
+      "class": "phone-input",
+      "placeholder": "Phone Number"
+    },
+    "googleSignUpButton": {
+      "id": "googleBtn"
+    },
+    "githubSignUpButton": {
+      "id": "githubBtn"
+    },
+    "signUpButton": {
+      "id": "signup-btn"
+    },
+    "switchToLogin": {
+      "id": "login-switch"
+    }
+  },
+  "Verification": {
+    "resendCode": {
+      "id": "resend-verify-timer"
+    },
+    "codeInput": {
+      "id": "code"
+    },
+    "backToSignupButton": {
+      "id": "back-to-signup"
+    },
+    "verifyButton": {
+      "id": "verify-btn"
+    }
+  },
+  "ProfilePicSettings": {
+    "editProfilePic": {
+      "data-testid": "EditProfilePic"
+    },
+    "noProfilePic": {
+      "data-testid": "NoProfile"
+    },
+    "fileInputForProfilePic": {
+      "data-testid": "file-input"
+    },
+    "updateProfilePicture": {
+      "id": "change-profile-picture"
+    },
+    "removeProfilePicture": {
+      "id": "remove-profile-picture"
+    }
+  },
+  "UserSettings": {
+    "inputFields": {
+      "phoneNumber": {
+        "data-testid": "phone-phoneNumber"
+      },
+      "email": {
+        "id": "profile-email"
+      },
+      "userName": {
+        "id": "profile-userName"
+      },
+      "name": {
+        "id": "profile-name"
+      },
+      "bio": {
+        "id": "profile-bio"
+      }
+    },
+    "saveEditsButton": {
+      "id": "button-save-edit"
+    },
+    "editButtons": {
+      "phoneNumber": {
+        "id": "button-edit-phoneNumber"
+      },
+      "email": {
+        "id": "button-edit-email"
+      },
+      "userName": {
+        "id": "button-edit-userName"
+      },
+      "name": {
+        "id": "button-edit-name"
+      },
+      "bio": {
+        "id": "button-edit-bio"
+      }
+    },
+    "errors": {
+      "phoneNumber": {
+        "id": "error-phone-phoneNumber"
+      },
+      "email": {
+        "id": "error-profile-email"
+      },
+      "userName": {
+        "id": "error-profile-userName"
+      },
+      "name": {
+        "id": "error-profile-name"
+      },
+      "bio": {
+        "id": "error-profile-bio"
+      }
+    }
+  },
+
+  "ChatSearch": {
+    "searchBar": {
+      "className": "search-bar"
+    },
+    "searchBarInput": {
+      "data-testid": "search-input-test"
+    },
+    "searchIcon": {
+      "data-testid": "search-icon"
+    },
+    "closeIcon": {
+      "data-testid": "close-icon"
+    }
+  },
+  "GifsAndStickers": {
+    "pickerButton": {
+      "id": "unified-picker"
+    },
+    "switchToGIFs": {
+      "id": "button-gif"
+    },
+    "switchToStickers": {
+      "id": "button-stickers"
+    },
+    "sticker": {
+      "id": "blobName"
+    }
+  },
+  "ViewingAttachments": {
+    "audioAttachment": {
+      "data-testid": "audio-viewer"
+    },
+    "audioAttachmentPlayButton": {
+      "data-testid": "audio-play-button"
+    },
+    "audioAttachmentSeekBar": {
+      "data-testid": "seek-bar"
+    },
+    "loadAttachmentButton": {
+      "data-testid": "render-button"
+    },
+    "fileAttachmentLink": {
+      "data-testid": "download-link"
+    },
+    "imageAttachment": {
+      "data-testid": "image-viewer"
+    },
+    "videoAttachment": {
+      "data-testid": "video-viewer"
+    }
+  },
+  "UploadingAttachments": {
+    "attachmentPreview": {
+      "data-testid": "attachment-preview"
+    },
+    "removeAttachment": {
+      "data-testid": "remove-attachment-button"
+    },
+    "fileInput": {
+      "data-testid": "input-file"
+    },
+    "imageInput": {
+      "data-testid": "input-image"
+    },
+    "audioInput": {
+      "data-testid": "input-audio"
+    },
+    "uploadAttachmentMenu": {
+      "data-testid": "attach-icon"
+    },
+    "attachmentMenu": {
+      "data-testid": "attach-menu"
+    },
+    "attachFileButton": {
+      "data-testid": "attach-file"
+    },
+    "attachImageVideoButton": {
+      "data-testid": "attach-image"
+    },
+    "attachAudioButton": {
+      "data-testid": "attach-audio"
+    }
+  },
+  "SwitchingReadReceipts": {
+    "toggleReadReceipts": {
+      "data-testid": "toggle-switch-test"
+    }
+  },
+  "AddNewStoryModal": {
+    "modalContainer": {
+      "className": "add-new-story-modal"
+    },
+    "closeModalIcon": {
+      "className": "cancel-modal"
+    },
+    "storyPreview": {
+      "image": {
+        "className": "story-preview"
+      },
+      "video": {
+        "className": "story-preview",
+        "data-testid": "story-preview-video"
+      }
+    },
+    "storyData": {
+      "container": {
+        "className": "story-data"
+      },
+      "emojisContainer": {
+        "className": "stories-emojis-container"
+      },
+      "textArea": {
+        "className": "message-input"
+      },
+      "cancelTextIcon": {
+        "className": "cancel-type"
+      },
+      "sendStoryIcon": {
+        "className": "send-story-icon"
+      }
+    }
+  },
+  "ChatItem": {
+    "container": {
+      "data-testid": "chat-item",
+      "className": "single-chat"
+    },
+    "chatContent": {
+      "className": "single-chat-content"
+    },
+    "profilePicWrapper": {
+      "className": "profile-pic-wrapper",
+      "conditionalClass": "has-story (if myChat.story is true)"
+    },
+    "profilePic": {
+      "className": "profile-pic"
+    },
+    "userInfo": {
+      "className": "content"
+    },
+    "userNameContainer": {
+      "className": "name-container"
+    },
+    "userName": {
+      "className": "user-name",
+      "conditionalClasses": [
+        "muted (if myChat.muted is true)",
+        "overflow (if isOverflowing is true)",
+        "hovered (if index is true)"
+      ]
+    },
+    "mutedBell": {
+      "className": "muted-bell",
+      "data-testid": "notification-bell"
+    },
+    "ticksInfo": {
+      "className": "ticks-info"
+    },
+    "tick": {
+      "className": "tick",
+      "sentTick": {
+        "data-testid": "sent-tick"
+      },
+      "deliveredTick": {
+        "data-testid": "delivered-tick"
+      },
+      "readTick": {
+        "data-testid": "read-tick"
+      },
+      "pendingTick": {
+        "data-testid": "pending-tick"
+      }
+    },
+    "messageTime": {
+      "className": "message-time",
+      "conditionalClass": "unread-time (if myChat.unreadMessageCount is true)"
+    },
+    "messagingInfo": {
+      "className": "messaging-info"
+    }
+  },
+
+  "ChatList": {
+    "container": {
+      "className": "chat-list"
+    },
+    "chatItemContainer": {
+      "className": "chat-item-container"
+    }
+  },
+  "ChatMessage": {
+    "container": {
+      "id": "dynamic",
+      "className": "message shadow sender"
+    },
+    "contextMenuTrigger": {
+      "event": "onContextMenu"
+    },
+    "relationshipsViewer": {
+      "component": "MessageRelationshipsViewer"
+    },
+    "messageContent": {
+      "className": "flex flex-col justify-between"
+    },
+    "messageInfo": {
+      "className": "message-info"
+    },
+    "editedTag": {
+      "className": "text-sm opacity-60"
+    },
+    "time": {
+      "className": "time opacity-60"
+    },
+    "messageStatus": {
+      "container": {
+        "className": "message-status"
+      },
+      "sentTick": {
+        "component": "SentTicks"
+      },
+      "deliveredTick": {
+        "component": "DeliveredTicks"
+      },
+      "readTick": {
+        "component": "ReadTicks"
+      },
+      "pendingTick": {
+        "component": "PendingSend"
+      }
+    },
+    "messageActionsOverlay": {
+      "className": "message-actions-overlay"
+    },
+    "messageActionsMenu": {
+      "container": {
+        "className": "message-actions-menu shadow-lg"
+      },
+      "replyButton": {
+        "icon": "faReply"
+      },
+      "editButton": {
+        "icon": "faEdit"
+      },
+      "forwardButton": {
+        "icon": "faShare"
+      },
+      "infoButton": {
+        "icon": "faCircleInfo"
+      },
+      "pinButton": {
+        "icon": "faThumbtack"
+      },
+      "unpinButton": {
+        "icon": "faThumbtackSlash"
+      },
+      "deleteButton": {
+        "icon": "faTrash",
+        "className": "danger"
+      }
+    }
+  },
+
+  "ChatPage": {
+    "container": {
+      "className": "chat-page"
+    },
+    "searchBar": {
+      "component": "SearchBar"
+    },
+    "sidebar": {
+      "container": {
+        "className": "sidebar__stories"
+      },
+      "storiesContainer": {
+        "component": "StoriesContainer"
+      }
+    },
+    "sidebarOtherContent": {
+      "className": "sidebar__other-content overflow-y-auto h-full"
+    },
+    "chatList": {
+      "component": "ChatList",
+      "condition": "chatList && chatList.length > 0",
+      "props": {
+        "chatList": "chatList",
+        "chooseChat": "selectChat"
+      }
+    },
+    "addNewButton": {
+      "component": "AddNewButton",
+      "event": "onClick"
+    }
+  },
+  "DeletedMessage": {
+    "container": {
+      "className": "deleted-message"
+    },
+    "icon": {
+      "component": "FontAwesomeIcon",
+      "icon": "faBan",
+      "className": "deleted-icon"
+    },
+    "text": {
+      "className": "deleted-text",
+      "content": "{whoDeleted} deleted this message"
+    }
+  },
+  "DeliveredTicks": {
+    "container": {
+      "className": "delivered-ticks",
+      "dataTestId": "delivered-icon"
+    },
+    "icon": {
+      "component": "FontAwesomeIcon",
+      "icon": "faCheckDouble",
+      "className": "delivered-icon"
+    }
+  },
+
+  "draftedMessage": {
+    "container": {
+      "className": "drafted-message"
+    },
+    "draftLabel": {
+      "className": "draft"
+    },
+    "messageDraft": {
+      "className": "message-draft",
+      "text": "{trimmedMessage}"
+    }
+  },
+  "ErrorMessage": {
+    "container": {
+      "className": "error-message"
+    },
+    "icon": {
+      "component": "FontAwesomeIcon",
+      "icon": "faCircleExclamation",
+      "className": "fa-error"
+    },
+    "message": {
+      "text": "{errorMessage}"
+    }
+  },
+  "ImageMessage": {
+    "container": {
+      "className": "image-message"
+    },
+    "icon": {
+      "component": "FontAwesomeIcon",
+      "icon": "faCamera",
+      "className": "image-icon",
+      "conditionalClass": [
+        {
+          "class": "active",
+          "condition": "messageState === 2"
+        }
+      ]
+    },
+    "text": {
+      "className": "image-text",
+      "conditionalClass": [
+        {
+          "class": "active",
+          "condition": "messageState === 2"
+        }
+      ],
+      "text": "Image"
+    }
+  },
+
+  "Info": {
+    "container": {
+      "className": "info",
+      "ref": "infoRef",
+      "onClick": "toggleDropdown"
+    },
+    "icon": {
+      "component": "FontAwesomeIcon",
+      "icon": "faChevronDown",
+      "style": { "color": "grey" }
+    },
+    "dropdown": {
+      "conditionalVisibility": "isVisible",
+      "container": {
+        "className": "dropdown",
+        "onMouseLeave": "setIsVisible(false)",
+        "ref": "dropdownRef",
+        "style": {
+          "top": "dropdownPosition === 'down' ? '100%' : 'auto'",
+          "bottom": "dropdownPosition === 'up' ? '100%' : 'auto'"
+        }
+      },
+      "items": [
+        {
+          "condition": "!muted",
+          "text": "Mute notifications",
+          "onClick": "handleMute"
+        },
+        {
+          "condition": "muted",
+          "text": "Unmute notifications",
+          "onClick": "onUnMute"
+        },
+        {
+          "text": "Block",
+          "onClick": "handleAction('Block')"
+        },
+        {
+          "text": "Archive",
+          "onClick": "handleAction('Archive')"
+        },
+        {
+          "condition": "group",
+          "text": "Leave group",
+          "style": {
+            "padding": "8px 12px",
+            "cursor": "pointer",
+            "color": "red"
+          },
+          "onClick": "handleAction('Leave group')"
+        }
+      ]
+    }
+  },
+  "LastMessage": {
+    "container": {
+      "className": "last-message"
+    },
+    "conditionals": [
+      {
+        "condition": "myChat.drafted",
+        "component": "DraftedMessage",
+        "props": {
+          "message": "myChat.lastMessage"
+        }
+      },
+      {
+        "condition": "myChat.messageState === 3",
+        "component": "DeletedMessage",
+        "props": {
+          "sender": "myChat.senderId"
+        }
+      },
+      {
+        "condition": "myChat.messageType?.toLowerCase() === 'text'",
+        "component": "TextMessage",
+        "props": {
+          "index": "index",
+          "message": "myChat.lastMessage"
+        }
+      },
+      {
+        "condition": "myChat.messageType?.toLowerCase() === 'image'",
+        "component": "ImageMessage",
+        "props": {
+          "messageState": "myChat.messageState"
+        }
+      },
+      {
+        "condition": "myChat.messageType?.toLowerCase() === 'audio' || myChat.messageType?.toLowerCase() === 'voiceNote'",
+        "component": "AudioVoiceNoteMessage",
+        "props": {
+          "messageType": "myChat.messageType",
+          "messageState": "myChat.messageState",
+          "message": "myChat.lastMessage"
+        }
+      },
+      {
+        "condition": "myChat.messageType?.toLowerCase() === 'video'",
+        "component": "VideoMessage",
+        "props": {
+          "messageState": "myChat.messageState"
+        }
+      },
+      {
+        "condition": "myChat.messageType?.toLowerCase() === 'sticker'",
+        "component": "StickerMessage",
+        "props": {
+          "messageState": "myChat.messageState"
+        }
+      },
+      {
+        "condition": "myChat.type == 'DM' && myChat.participantKeys && (!myChat.participantKeys[0] || !myChat.participantKeys[1])",
+        "component": "AwaitingJoinMessage",
+        "props": {
+          "chat": "myChat"
+        }
+      }
+    ]
+  }
+}

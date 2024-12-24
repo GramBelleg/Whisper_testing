@@ -1,0 +1,762 @@
+LoginForm:
+  emailInput:
+    id: email
+  passwordInput:
+    id: password
+  loginButton:
+    id: login-btn
+  forgotPasswordLink:
+    id: forgot-password-link
+  signUpLink:
+    id: sign-up-link
+  loginError:
+    id: error-login
+  googleLoginButton:
+    id: googleBtn
+  githubLoginButton:
+    id: githubBtn
+
+ForgotPassword:
+  emailInput:
+    id: email
+  sendResetEmailButton:
+    id: send-reset-btn
+  backToLogin:
+    id: back-to-login
+  errorInSendForgetEmail:
+    id: error-forgot-password
+  errorInEmailInput:
+    id: email-error
+
+ResetPassword:
+  resetCodeInput:
+    id: resetCode
+  passwordInput:
+    id: password
+  confirmPasswordInput:
+    id: confirmPassword
+  logoutAllCheckbox:
+    id: logoutCheck
+  resetErrorMessage:
+    id: error-reset
+  resetButton:
+    id: reset-password-btn
+
+SignupForm:
+  nameInput:
+    id: name
+  usernameInput:
+    id: userName
+  emailInput:
+    id: email
+  passwordInput:
+    id: password
+  confirmPasswordInput:
+    id: confirmPassword
+  phoneInput:
+    class: phone-input
+    placeholder: Phone Number
+  googleSignUpButton:
+    id: googleBtn
+  githubSignUpButton:
+    id: githubBtn
+  signUpButton:
+    id: signup-btn
+  switchToLogin:
+    id: login-switch
+
+Verification:
+  resendCode:
+    id: resend-verify-timer
+  codeInput:
+    id: code
+  backToSignupButton:
+    id: back-to-signup
+  verifyButton:
+    id: verify-btn
+
+ProfilePicSettings:
+  editProfilePic:
+    data-testid: EditProfilePic
+  noProfilePic:
+    data-testid: NoProfile
+  fileInputForProfilePic:
+    data-testid: file-input
+  updateProfilePicture:
+    id: change-profile-picture
+  removeProfilePicture:
+    id: remove-profile-picture
+
+UserSettings:
+  inputFields:
+    phoneNumber:
+    data-testid: phone-phoneNumber
+    email:
+    id: profile-email
+    userName:
+    id: profile-userName
+    name:
+    id: profile-name
+    bio:
+    id: profile-bio
+  saveEditsButton:
+    id: button-save-edit
+  editButtons:
+    phoneNumber:
+    id: button-edit-phoneNumber
+    email:
+    id: button-edit-email
+    userName:
+    id: button-edit-userName
+    name:
+    id: button-edit-name
+    bio:
+    id: button-edit-bio
+  errors:
+    phoneNumber:
+    id: error-phone-phoneNumber
+    email:
+    id: error-profile-email
+    userName:
+    id: error-profile-userName
+    name:
+    id: error-profile-name
+    bio:
+    id: error-profile-bio
+
+ChatSearch:
+  searchBar:
+    className: search-bar
+  searchBarInput:
+    data-testid: search-input-test
+  searchIcon:
+    data-testid: search-icon
+  closeIcon:
+    data-testid: close-icon
+
+GifsAndStickers:
+  pickerButton:
+    id: unified-picker
+  switchToGIFs:
+    id: button-gif
+  switchToStickers:
+    id: button-stickers
+  sticker:
+    id: blobName  
+
+ViewingAttachments:
+  audioAttachment:
+    data-testid: audio-viewer
+  audioAttachmentPlayButton:
+    data-testid: audio-play-button
+  audioAttachmentSeekBar:
+    data-testid: seek-bar
+  loadAttachmentButton:
+    data-testid: render-button
+  fileAttachmentLink:
+    data-testid: download-link
+  imageAttachment:
+    data-testid: image-viewer
+  videoAttachment:
+    data-testid: video-viewer
+
+UploadingAttachments:
+  attachmentPreview:
+    data-testid: attachment-preview
+  removeAttachment:
+    data-testid: remove-attachment-button
+  fileInput:
+    data-testid: input-file
+  imageInput:
+    data-testid: input-image
+  audioInput:
+    data-testid: input-audio
+  uploadAttachmentMenu:
+    data-testid: attach-icon
+  attachmentMenu:
+    data-testid: attach-menu
+  attachFileButton:
+    data-testid: attach-file
+  attachImageVideoButton:
+    data-testid: attach-image
+  attachAudioButton:
+    data-testid: attach-audio
+
+SwitchingReadReceipts:
+  toggleReadReceipts:
+    data-testid: toggle-switch-test
+
+
+AddNewStoryModal:
+  modalContainer:
+    className: add-new-story-modal
+  closeModalIcon:
+    className: cancel-modal
+  storyPreview:
+    image:
+    className: story-preview
+    video:
+    className: story-preview
+    data-testid: story-preview-video
+  storyData:
+    container:
+    className: story-data
+    emojisContainer:
+    className: stories-emojis-container
+    textArea:
+    className: message-input
+    cancelTextIcon:
+    className: cancel-type
+    sendStoryIcon:
+    className: send-story-icon
+
+
+ChatItem:
+  container:
+    data-testid: chat-item
+    className: single-chat
+  chatContent:
+    className: single-chat-content
+  profilePicWrapper:
+    className: profile-pic-wrapper
+    conditionalClass: has-story (if myChat.story is true)
+  profilePic:
+    className: profile-pic
+  userInfo:
+    className: content
+  userNameContainer:
+    className: name-container
+  userName:
+    className: user-name
+    conditionalClasses:
+    - muted (if myChat.muted is true)
+    - overflow (if isOverflowing is true)
+    - hovered (if index is true)
+  mutedBell:
+    className: muted-bell
+    data-testid: notification-bell
+  ticksInfo:
+    className: ticks-info
+  tick:
+    className: tick
+    sentTick:
+    data-testid: sent-tick
+    deliveredTick:
+    data-testid: delivered-tick
+    readTick:
+    data-testid: read-tick
+    pendingTick:
+    data-testid: pending-tick
+  messageTime:
+    className: message-time
+    conditionalClass: unread-time (if myChat.unreadMessageCount is true)
+  messagingInfo:
+    className: messaging-info
+
+ChatList:
+  container:
+    className: chat-list
+  chatItemContainer:
+    className: chat-item-container
+
+ChatMessage:
+  container:
+    id: dynamic
+    className: "message shadow sender" # or "message shadow reciever" based on condition
+  contextMenuTrigger:
+    event: onContextMenu
+  relationshipsViewer:
+    component: MessageRelationshipsViewer
+  messageContent:
+    className: "flex flex-col justify-between"
+  messageInfo:
+    className: message-info
+  editedTag:
+    className: "text-sm opacity-60"
+  time:
+    className: "time opacity-60"
+  messageStatus:
+    container:
+    className: message-status
+    sentTick:
+    component: SentTicks
+    deliveredTick:
+    component: DeliveredTicks
+    readTick:
+    component: ReadTicks
+    pendingTick:
+    component: PendingSend
+  messageActionsOverlay:
+    className: message-actions-overlay
+  messageActionsMenu:
+    container:
+    className: "message-actions-menu shadow-lg"
+    replyButton:
+    icon: faReply
+    editButton:
+    icon: faEdit
+    forwardButton:
+    icon: faShare
+    infoButton:
+    icon: faCircleInfo
+    pinButton:
+    icon: faThumbtack
+    unpinButton:
+    icon: faThumbtackSlash
+    deleteButton:
+    icon: faTrash
+    className: danger
+
+ChatPage:
+  container:
+    className: chat-page
+  searchBar:
+    component: SearchBar
+  sidebar:
+    container:
+    className: sidebar__stories
+    storiesContainer:
+    component: StoriesContainer
+  sidebarOtherContent:
+    className: sidebar__other-content overflow-y-auto h-full
+  chatList:
+    component: ChatList
+    condition: chatList && chatList.length > 0
+    props:
+    chatList: chatList
+    chooseChat: selectChat
+  addNewButton:
+    component: AddNewButton
+    event: onClick
+
+DeletedMessage:
+  container:
+    className: deleted-message
+  icon:
+    component: FontAwesomeIcon
+    icon: faBan
+    className: deleted-icon
+  text:
+    className: deleted-text
+    content: "{whoDeleted} deleted this message"
+
+DeliveredTicks:
+  container:
+    className: delivered-ticks
+    dataTestId: delivered-icon
+  icon:
+    component: FontAwesomeIcon
+    icon: faCheckDouble
+    className: delivered-icon
+
+draftedMessage:
+  container:
+    className: drafted-message
+  draftLabel:
+    className: draft
+  messageDraft:
+    className: message-draft
+    text: {trimmedMessage}
+
+ErrorMessage:
+  container:
+    className: error-message
+  icon:
+    component: FontAwesomeIcon
+    icon: faCircleExclamation
+    className: fa-error
+  message:
+    text: {errorMessage}
+
+ImageMessage:
+  container:
+    className: image-message
+  icon:
+    component: FontAwesomeIcon
+    icon: faCamera
+    className: image-icon
+    conditionalClass: 
+      - class: active
+        condition: messageState === 2
+  text:
+    className: image-text
+    conditionalClass: 
+      - class: active
+        condition: messageState === 2
+    text: "Image"
+
+Info:
+  container:
+    className: info
+    ref: infoRef
+    onClick: toggleDropdown
+  icon:
+    component: FontAwesomeIcon
+    icon: faChevronDown
+    style: { color: 'grey' }
+  dropdown:
+    conditionalVisibility: isVisible
+    container:
+      className: dropdown
+      onMouseLeave: setIsVisible(false)
+      ref: dropdownRef
+      style: 
+        top: dropdownPosition === 'down' ? '100%' : 'auto'
+        bottom: dropdownPosition === 'up' ? '100%' : 'auto'
+    items:
+      - condition: !muted
+        text: "Mute notifications"
+        onClick: handleMute
+      - condition: muted
+        text: "Unmute notifications"
+        onClick: onUnMute
+      - text: "Block"
+        onClick: handleAction('Block')
+      - text: "Archive"
+        onClick: handleAction('Archive')
+      - condition: group
+        text: "Leave group"
+        style: { padding: '8px 12px', cursor: 'pointer', color: 'red' }
+        onClick: handleAction('Leave group')
+
+LastMessage:
+  container:
+    className: last-message
+  conditionals:
+    - condition: myChat.drafted
+      component: DraftedMessage
+      props:
+        message: myChat.lastMessage
+    - condition: myChat.messageState === 3
+      component: DeletedMessage
+      props:
+        sender: myChat.senderId
+    - condition: myChat.messageType?.toLowerCase() === 'text'
+      component: TextMessage
+      props:
+        index: index
+        message: myChat.lastMessage
+    - condition: myChat.messageType?.toLowerCase() === 'image'
+      component: ImageMessage
+      props:
+        messageState: myChat.messageState
+    - condition: myChat.messageType?.toLowerCase() === 'audio' || myChat.messageType?.toLowerCase() === 'voiceNote'
+      component: AudioVoiceNoteMessage
+      props:
+        messageType: myChat.messageType
+        messageState: myChat.messageState
+        message: myChat.lastMessage
+    - condition: myChat.messageType?.toLowerCase() === 'video'
+      component: VideoMessage
+      props:
+        messageState: myChat.messageState
+    - condition: myChat.messageType?.toLowerCase() === 'sticker'
+      component: StickerMessage
+      props:
+        messageState: myChat.messageState
+    - condition: myChat.type == 'DM' && myChat.participantKeys && (!myChat.participantKeys[0] || !myChat.participantKeys[1])
+      component: AwaitingJoinMessage
+      props:
+        chat: myChat
+
+LoadingContainer:
+  container:
+    className: loading-container
+  children:
+    - className: loading-logo
+      component: img
+      props:
+        src: whisper_logo
+        alt: 'Whisper Logo'
+    - className: loading-bar
+      component: div
+      children:
+        - className: progress
+          component: div
+
+NoChatOpened:
+  container:
+    className: no-chat-opened
+  children:
+    - className: app-name-bubble
+      component: div
+      children:
+        - className: app-name
+          component: div
+          text: 'Whisper'
+    - className: tagline
+      component: div
+      text: 'The ultimate way to connect'
+
+PendingSendTicks:
+  container:
+    className: pending-send-ticks
+    attributes:
+      data-testid: pending-send-icon
+  children:
+    - className: pending-send-icon
+      component: FontAwesomeIcon
+      icon: faClock
+
+PinnedMessagesContainer:
+  container:
+    className: pinned-messages-container
+  children:
+    - className: indicators-container
+      children:
+        - component: div
+          attributes:
+            key: "{index}"
+            data-message-id: "{pinned.messageId}"
+            className: "{'pinned indicator ' + (activeIndex === index ? 'indicator-active' : 'indicator-inactive')}"
+    - className: pinned-messages
+      attributes:
+        onClick: "{(e) => { if (!dropdownRef.current || !dropdownRef.current.contains(e.target)) { handleNextMessage() } }}"
+        onContextMenu: "{(e) => { e.preventDefault(); handlePreviousMessage(); }}"
+      children:
+        - component: FontAwesomeIcon
+          attributes:
+            icon: faThumbtack
+            style: { height: '24px' }
+            className: icon-pin
+        - className: messages-list
+          children:
+            - className: pinned-message
+              children:
+                - className: message-content
+                  attributes:
+                    title: "{pinnedMessages[activeIndex]?.content}"
+                  content: "{pinnedMessages[activeIndex]?.content}"
+        - className: dropdown-container
+          attributes:
+            ref: dropdownRef
+            onClick: "{(e) => e.stopPropagation()}"
+          children:
+            - component: FontAwesomeIcon
+              attributes:
+                icon: faChevronDown
+                className: dropdown-icon
+                onClick: toggleDropdown
+            - className: dropdown-menu
+              conditionalRender: "{isDropdownOpen}"
+              children:
+                - component: button
+                  onClick: handleUnpin
+                  content: Unpin
+                - component: button
+                  onClick: handleGoToMessage
+                  content: Go to Message
+
+ReadTicks:
+  container:
+    className: read-ticks
+    attributes:
+      data-testid: read-icon
+      width: '100%'
+      height: '100%'
+  children:
+    - component: FontAwesomeIcon
+      attributes:
+        icon: faCheckDouble
+        className: read-icon
+
+ModalProvider:
+  component: ModalProvider
+  children:
+    - className: sampleHome
+      children:
+        - className: buttons-bar-container
+          children:
+            - component: ButtonsBar
+        - component: SidebarProvider
+          children:
+            - component: Sidebar
+        - className: chatting
+          children:
+            - component: SingleChatSection
+
+SentTicks:
+  className: "sent-ticks"
+  data-testid: "sent-icon"
+  id: "sent-icon-id" 
+  content:
+    - type: "FontAwesomeIcon"
+      icon: "faCheck"
+      className: "sent-icon"
+
+SingleStory:
+  story-controls:
+    className: "story-controls"
+    control-button:
+      className: "control-button"
+      aria-label: "Pause"
+    dropdown-container:
+      className: "dropdown-container"
+    three-dots-button:
+      className: "three-dots-button"
+      aria-label: "Options"
+    dropdown-menu:
+      className: "dropdown-menu"
+    dropdown-item-add:
+      className: "dropdown-item add"
+    dropdown-item-delete:
+      className: "dropdown-item delete"
+    edit-visibility-within-story:
+      className: "edit-visibility-within-story"
+    dropdown-item-visibility:
+      className: "dropdown-item visibility"
+  
+  visibility-dropdown:
+    className: "within-story-visibility"
+    input-radio-everyone:
+      type: "radio"
+      value: "Everyone"
+    input-radio-contacts:
+      type: "radio"
+      value: "Contacts"
+    input-radio-nobody:
+      type: "radio"
+      value: "Nobody"
+
+  story-content:
+    className: "story-content"
+    likes:
+      className: "likes"
+    likes-count:
+      className: "likes-count"
+    views:
+      className: "views"
+    views-count:
+      className: "views-count"
+    story-content-text:
+      className: "story-content-text"
+
+StoriesTab:
+  className: "stories-container"
+  stories-wrapper:
+    className: "stories-wrapper"
+  stories-scroll:
+    className: "stories-scroll"
+    ref: "scrollContainerRef"
+  stories-list:
+    className: "stories-list"
+  arrow-button-prev:
+    className: "arrow-button prev"
+  story-item:
+    className: "story-item"
+  profile-picture-container:
+    className: "profile-picture-container"
+  profile-picture-unseen:
+    className: "profile-picture unseen"
+  plus-icon-container:
+    className: "plus-icon-container"
+  plus-icon:
+    className: "plus-icon"
+  story-user:
+    className: "story-user"
+  arrow-button-next:
+    className: "arrow-button next"
+  hidden-file-input:
+    type: "file"
+    style: "display: none"
+    onChange: "handleFileChange"
+
+StoriesContainer:
+  className: "my-stories-container"
+  story-wrapper:
+    className: "story-wrapper"
+  single-story:
+    component: "SingleStory"
+    onNextStory: "handleNextStory"
+    handleAddNewStoryClick: "handleAddNewStoryClick"
+    onClose: "onClose"
+  absolute-inset-0:
+    className: "absolute inset-0 flex items-center justify-between p-4"
+  nav-button-previous:
+    className: "nav-button"
+    aria-label: "Previous story"
+  nav-button-next:
+    className: "nav-button"
+    aria-label: "Next story"
+  indicators-container:
+    className: "indicators-container"
+  indicator:
+    className: "indicator"
+  indicator-active:
+    className: "indicator-active"
+  indicator-inactive:
+    className: "indicator-inactive"
+  hidden-file-input:
+    type: "file"
+    style: "display: none"
+    onChange: "handleFileChange"
+
+TextMessage:
+  className: "text-message"
+  hovered:
+    className: "hovered"
+  ref: "textRef"
+
+VisibilitySettings:
+  className: "visibility-settings"
+  data-testid: "test-visibility-page"
+
+  header:
+  className: "flex gap-4 items-center header"
+
+  back-icon:
+  className: "back-icon"
+  data-testid: "back-icon"
+
+  who-can:
+  className: "who-can"
+
+  who-can-item:
+  className: "who-can-item"
+
+  radio-group:
+  className: "radio-group"
+
+  profile-pic-visibility:
+  - data-testid: "profile-pic-visibiity-Everyone"
+    type: "radio"
+    value: "Everyone"
+  - data-testid: "profile-pic-visibiity-Contacts"
+    type: "radio"
+    value: "Contacts"
+  - data-testid: "profile-pic-visibiity-noone"
+    type: "radio"
+    value: "Nobody"
+
+  story-visibility:
+  - data-testid: "story-visibility-Everyone"
+    type: "radio"
+    value: "Everyone"
+  - data-testid: "story-visibility-Contacts"
+    type: "radio"
+    value: "Contacts"
+  - data-testid: "story-visibility-noone"
+    type: "radio"
+    value: "Nobody"
+
+  last-seen-visibility:
+  - data-testid: "last-seen-Everyone"
+    type: "radio"
+    value: "Everyone"
+  - data-testid: "last-seen-Contacts"
+    type: "radio"
+    value: "Contacts"
+  - data-testid: "last-seen-nooone"
+    type: "radio"
+    value: "Nobody"
+
+  toggle-container:
+  className: "who-can-item toggle-container"
+
+  toggle-switch:
+  className: "toggle-switch"
+
+  readReceipts:
+  id: "readReceipts"
+  type: "checkbox"
+  data-testid: "toggle-switch-test"

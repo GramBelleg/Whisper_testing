@@ -1,0 +1,25 @@
+{
+    "user1": {
+      "email": "vicenta_graham@hotmail.com",
+      "username": "user1",
+      "name": "tayseer",
+      "password": "Abcdefgh12#"
+    },
+    "user2": {
+        "email": "allison.hermiston22@yahoo.com",
+        "username": "user2",
+        "name": "akram",
+        "password": "Abcdefgh12#"
+      },
+    "user3": {
+        "email": "aliyah_parker25@hotmail.com",
+        "username": "user3",
+        "name": "moataz",
+        "password": "Abcdefgh12#"
+    },
+    "user_admin": {
+        "email": "admin@admin.com",
+        "password": "Abcdefgh12#"
+    }
+  }
+  
