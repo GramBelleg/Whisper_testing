@@ -1,23 +1,18 @@
 describe('channels', () => {
   const WUT = "http://localhost:5173/login" // website under test
-  const master_token = "f5a836f5-72da-4c01-8de2-caa1e60f41b3" // website under test
-  const test_Email = `${master_token}@emailhook.site` 
-  const user1_email = "isadore.torphy@gmail.com"
-  const user1_password = "Abcdefgh12#"
-  const user2_email = "jairo.schimmel@gmail.com"
-  const user2_password = "Abcdefgh12#"
+  let users
 
 
-  // before(() => {
-  //   cy.fixture('selectors').then((selectors) => {
-  //     selectors = selectors;
-  //   });
-  // });
+  before(() => {
+    cy.fixture('users').then((data) => {
+      users = data;
+    });
+  });
 
   beforeEach(() => {
     cy.visit(WUT);
-    cy.get("#email").type(user1_email);
-    cy.get("#password").type(user1_password);
+    cy.get("#email").type(users.user1.email);
+    cy.get("#password").type(users.user1.password);
     cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
     cy.url().should('eq','http://localhost:5173/');
     cy.wait(1000);
@@ -38,7 +33,7 @@ describe('channels', () => {
       cy.get('.user-list > :nth-child(2)').click();
       cy.get('.forward-icon').click();
       cy.get('#_24x24_On_Light_Edit').click();
-      cy.get('[data-testid="bio"]').type(channel_name);   gfghf
+      cy.get('[data-testid="bio"]').type(channel_name);
       cy.get('[data-testid="button-save-edit"]').click();
       cy.get('.forward-icon').click();
       cy.get('.chat-list')
@@ -64,8 +59,8 @@ describe('channels', () => {
 
       cy.Logout();
 
-      cy.get("#email").type(user2_email);
-      cy.get("#password").type(user2_password);
+      cy.get("#email").type(users.user2.email);
+      cy.get("#password").type(users.user2.password);
       cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
       cy.url().should('eq','http://localhost:5173/');
       cy.contains('awy').click();
@@ -101,7 +96,7 @@ describe('channels', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, user2_email, user2_password);
+      cy.Login(WUT, users.user2.email, users.user2.password);
       cy.wait(2000)
 
       cy.get('.chat-list')
@@ -123,7 +118,7 @@ describe('channels', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, user2_email, user2_password);
+      cy.Login(WUT, users.user2.email, users.user2.password);
 
       cy.get('.chat-list')
       .contains(channel_name).should('not.exist');
@@ -142,7 +137,7 @@ describe('channels', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, "alia29@hotmail.com", user2_password);
+      cy.Login(WUT, "alia29@hotmail.com", users.user2.password);
       cy.get('.chat-list')
       .contains(channel_name).should('exist');
     });

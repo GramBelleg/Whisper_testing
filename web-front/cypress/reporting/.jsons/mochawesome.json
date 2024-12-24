@@ -1,0 +1,249 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-12-23T16:33:19.835Z",
+    "end": "2024-12-23T16:34:26.718Z",
+    "duration": 66883,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ed2e86b-732b-4c5c-85fb-37fcd2111870",
+      "title": "",
+      "fullFile": "cypress\\e2e\\admin.cy.js",
+      "file": "cypress\\e2e\\admin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "71f2f086-8d0b-4345-b48d-dd2312ec6eff",
+          "title": "admin",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e8e40abc-9d5f-4b2e-ac14-5105f67e1ebb",
+              "title": "Groups - testing functionality",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "testing content filltering",
+                  "fullTitle": "admin Groups - testing functionality testing content filltering",
+                  "timedOut": null,
+                  "duration": 15525,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"all-groups-icon\"]').click();\ncy.get('.group-list > :nth-child(1)').rightclick();\ncy.get('[data-testid=\"toggle-filter-button\"]').click();\ncy.Logout();\ncy.Login(WUT, users.user2.email, users.user2.password);\ncy.contains(groups.group1.name).click();\ncy.get('[data-testid=\"text-input\"]').type(bad_word);\ncy.get('.voice-send-container').click();\n//   cy.get('.error-message').should('exist');\ncy.wait(4000);\ncy.contains(bad_word).should('not.exist');",
+                  "err": {},
+                  "uuid": "60f949f6-1643-43c9-aa57-6ff3f9735c8e",
+                  "parentUUID": "e8e40abc-9d5f-4b2e-ac14-5105f67e1ebb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "testing removing content filltering",
+                  "fullTitle": "admin Groups - testing functionality testing removing content filltering",
+                  "timedOut": null,
+                  "duration": 18050,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\admin.cy.js\\\\admin -- Groups - testing functionality -- testing removing content filltering (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.get('[data-testid=\"all-groups-icon\"]').click();\ncy.get('.group-list > :nth-child(1)').rightclick();\ncy.get('[data-testid=\"toggle-filter-button\"]').click();\ncy.reload();\ncy.get('[data-testid=\"all-groups-icon\"]').click();\ncy.get('.group-list > :nth-child(1)').rightclick();\ncy.get('[data-testid=\"toggle-filter-button\"]').click();\ncy.Logout();\ncy.Login(WUT, users.user2.email, users.user2.password);\ncy.contains(groups.group1.name).click();\ncy.get('[data-testid=\"text-input\"]').type(bad_word);\ncy.get('.voice-send-container').click();\n//   cy.get('.error-message').should('exist');\ncy.wait(4000);\ncy.contains(bad_word).should('exist');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'fack' but never did.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'fack' but never did.\n    at Context.eval (webpack://web-front/./cypress/e2e/admin.cy.js:71:30)",
+                    "diff": null
+                  },
+                  "uuid": "070f47a3-2a0f-4a0f-a5d7-32517df71a96",
+                  "parentUUID": "e8e40abc-9d5f-4b2e-ac14-5105f67e1ebb",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "testing searching",
+                  "fullTitle": "admin Groups - testing functionality testing searching",
+                  "timedOut": null,
+                  "duration": 4393,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"all-groups-icon\"]').click();\ncy.get('.search-input').type(groups.group1.name);\ncy.get('.group-list').contains(groups.group1.name).should('exist');",
+                  "err": {},
+                  "uuid": "0894dec4-5873-451a-8866-0fc3b2399257",
+                  "parentUUID": "e8e40abc-9d5f-4b2e-ac14-5105f67e1ebb",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "60f949f6-1643-43c9-aa57-6ff3f9735c8e",
+                "0894dec4-5873-451a-8866-0fc3b2399257"
+              ],
+              "failures": [
+                "070f47a3-2a0f-4a0f-a5d7-32517df71a96"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 37968,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "a5fbab11-95e7-4d1e-833a-6f883c7744a8",
+              "title": "Users - testing functionality",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "testing banning",
+                  "fullTitle": "admin Users - testing functionality testing banning",
+                  "timedOut": null,
+                  "duration": 6218,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"all-users-icon\"]').click();\ncy.get('.user-list').contains(users.user2.email).rightclick();\ncy.get('[data-testid=\"toggle-ban-button\"]').click();\ncy.Logout();\ncy.visit(WUT);\ncy.get(\"#email\").type(users.user2.email);\ncy.get(\"#password\").type(users.user2.password);\ncy.get(\"#login-btn\").click();\ncy.contains(\"suspended\");",
+                  "err": {},
+                  "uuid": "6f4d9b35-d938-4f54-b958-81a7666b7574",
+                  "parentUUID": "a5fbab11-95e7-4d1e-833a-6f883c7744a8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "testing unbanning",
+                  "fullTitle": "admin Users - testing functionality testing unbanning",
+                  "timedOut": null,
+                  "duration": 11909,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\admin.cy.js\\\\admin -- Users - testing functionality -- testing unbanning (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.get('[data-testid=\"all-users-icon\"]').click();\ncy.get('.user-list').contains(users.user2.email).rightclick();\ncy.get('[data-testid=\"toggle-ban-button\"]').click();\ncy.reload();\ncy.get('[data-testid=\"all-users-icon\"]').click();\ncy.get('.user-list').contains(users.user2.email).rightclick();\ncy.get('[data-testid=\"toggle-ban-button\"]').click();\ncy.Logout();\ncy.Login(WUT, users.user2.email, users.user2.password);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:5173/login' to equal 'http://localhost:5173/'",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: expected 'http://localhost:5173/login' to equal 'http://localhost:5173/'\n    at Context.eval (webpack://web-front/./cypress/support/commands.js:84:13)",
+                    "diff": "- 'http://localhost:5173/login'\n+ 'http://localhost:5173/'\n"
+                  },
+                  "uuid": "921b1423-2b0b-4eea-a0a4-26e5fe271b08",
+                  "parentUUID": "a5fbab11-95e7-4d1e-833a-6f883c7744a8",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "testing searching",
+                  "fullTitle": "admin Users - testing functionality testing searching",
+                  "timedOut": null,
+                  "duration": 4384,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('[data-testid=\"all-users-icon\"]').click();\ncy.get('.search-input').type(users.user2.name);\ncy.get('.user-list').contains(users.user2.name).should('exist');",
+                  "err": {},
+                  "uuid": "645ae0ea-893c-40b0-b131-6085e7dc48e9",
+                  "parentUUID": "a5fbab11-95e7-4d1e-833a-6f883c7744a8",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "6f4d9b35-d938-4f54-b958-81a7666b7574",
+                "645ae0ea-893c-40b0-b131-6085e7dc48e9"
+              ],
+              "failures": [
+                "921b1423-2b0b-4eea-a0a4-26e5fe271b08"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 22511,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reporting\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

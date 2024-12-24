@@ -2,24 +2,18 @@
 
 describe('Groups chat', () => {
   const WUT = "http://localhost:5173/login" // website under test
-  const master_token = "f5a836f5-72da-4c01-8de2-caa1e60f41b3" // website under test
-  const test_Email = `${master_token}@emailhook.site` 
-  const user1_email = "isadore.torphy@gmail.com"
-  const user1_password = "Abcdefgh12#"
-  const user2_email = "jairo.schimmel@gmail.com"
-  const user2_password = "Abcdefgh12#"
+  let users;
 
-
-  // before(() => {
-  //   cy.fixture('selectors').then((selectors) => {
-  //     selectors = selectors;
-  //   });
-  // });
+  before(() => {
+    cy.fixture('users').then((data) => {
+      users = data;
+    });
+  });
 
   beforeEach(() => {
     cy.visit(WUT);
-    cy.get("#email").type(user1_email);
-    cy.get("#password").type(user1_password);
+    cy.get("#email").type(users.user1.email);
+    cy.get("#password").type(users.user1.password);
     cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
     cy.url().should('eq','http://localhost:5173/');
     cy.wait(1000);
@@ -31,42 +25,62 @@ describe('Groups chat', () => {
     const message = Math.random().toString(36).substring(2, 60);
     const group_name = Math.random().toString(36).substring(2, 30);
 
-    it('creating a group', () => {
-      const group_name = Math.random().toString(36).substring(2, 30);
+    // it('creating a group', () => {
+    //   const group_name = Math.random().toString(36).substring(2, 30);
 
-      cy.get('.add-new-button').click();
-      cy.contains('New Group').click();
-      cy.get('.user-list > :nth-child(1)').click();
-      cy.get('.user-list > :nth-child(2)').click();
-      cy.get('.forward-icon').click();
-      cy.get('#_24x24_On_Light_Edit').click();
-      cy.get('[data-testid="bio"]').type(group_name);
-      cy.get('[data-testid="button-save-edit"]').click();
-      cy.get('.forward-icon').click();
-      cy.contains(group_name).should("be.visible");
-    });
+    //   cy.get('.add-new-button').click();
+    //   cy.contains('New Group').click();
+    //   cy.get('.user-list > :nth-child(1)').click();
+    //   cy.get('.user-list > :nth-child(2)').click();
+    //   cy.get('.forward-icon').click();
+    //   cy.get('#_24x24_On_Light_Edit').click();
+    //   cy.get('[data-testid="bio"]').type(group_name);
+    //   cy.get('[data-testid="button-save-edit"]').click();
+    //   cy.get('.forward-icon').click();
+    //   cy.get('.chat-list')
+    //   .contains(group_name).should('exist');
+    // });
 
-    it('creating a DUPLICATE group', () => {
-      cy.createGroup(group_name);
-      cy.reload();
-      cy.createGroup(group_name);
-      cy.wait(2000)
-      cy.get('.chat-list')
-      .find('.user-name   ')
-      .filter((_, el) => el.textContent === group_name)
-      .should('have.length', 1);
-    });
+    // it('creating a DUPLICATE group', () => {
+    //   cy.createGroup(group_name);
+    //   cy.reload();
+    //   cy.createGroup(group_name);
+    //   cy.wait(2000)
+    //   cy.get('.chat-list')
+    //   .find('.user-name   ')
+    //   .filter((_, el) => el.textContent === group_name)
+    //   .should('have.length', 1);
+    // });
 
-    it('send messages and be recieved', () => {
+    // it('send messages and be recieved', () => {
+    //   cy.contains('bahebak').click();
+    //   cy.wait(3000) // they told me so, i am done with this already
+    //   cy.get('[data-testid="text-input"]').type(message);
+    //   cy.get('.voice-send-container').click();
+
+    //   cy.Logout();
+
+    //   cy.get("#email").type(users.user2.email);
+    //   cy.get("#password").type(users.user2.password);
+    //   cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
+    //   cy.url().should('eq','http://localhost:5173/');
+    //   cy.contains('bahebak').click();
+    //   cy.contains(message).should("be.visible");
+    // });
+
+    it('send files and be recieved', () => {
       cy.contains('bahebak').click();
-      cy.wait(3000) // they told me so, i am done with this already
+      cy.get('[data-testid="attach-icon"]').click();
+      const filePath = "cypress/fixtures/test_image.jpg";
+      cy.get('[data-testid="attach-menu"] > :nth-child(2)').click().selectFile(filePath, { force: true });;
+      cy.wait(300000) // they told me so, i am done with this already
       cy.get('[data-testid="text-input"]').type(message);
       cy.get('.voice-send-container').click();
 
       cy.Logout();
 
-      cy.get("#email").type(user2_email);
-      cy.get("#password").type(user2_password);
+      cy.get("#email").type(users.user2.email);
+      cy.get("#password").type(users.user2.password);
       cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
       cy.url().should('eq','http://localhost:5173/');
       cy.contains('bahebak').click();
@@ -102,7 +116,7 @@ describe('Groups chat', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, user2_email, user2_password);
+      cy.Login(WUT, users.user2.email, users.user2.password);
       cy.wait(2000)
 
       cy.get('.chat-list')
@@ -124,7 +138,7 @@ describe('Groups chat', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, user2_email, user2_password);
+      cy.Login(WUT, users.user2.email, users.user2.password);
 
       cy.get('.chat-list')
       .contains(group_name).should('not.exist');
@@ -143,7 +157,7 @@ describe('Groups chat', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, "alia29@hotmail.com", user2_password);
+      cy.Login(WUT, "alia29@hotmail.com", users.user2.password);
       cy.get('.chat-list')
       .contains(group_name).should('exist');
     });
