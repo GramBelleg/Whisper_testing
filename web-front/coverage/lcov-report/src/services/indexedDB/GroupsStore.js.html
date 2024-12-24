@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">39.18% </span>
+                <span class="strong">1.35% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>29/74</span>
+                <span class='fraction'>1/74</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.42% </span>
+                <span class="strong">3.03% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>14/33</span>
+                <span class='fraction'>1/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.37% </span>
+                <span class="strong">1.69% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/59</span>
+                <span class='fraction'>1/59</span>
             </div>
         
             
@@ -182,14 +182,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -198,14 +198,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">151x</span>
-<span class="cline-any cline-yes">151x</span>
-<span class="cline-any cline-yes">151x</span>
-<span class="cline-any cline-yes">151x</span>
-<span class="cline-any cline-yes">151x</span>
-<span class="cline-any cline-yes">151x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">151x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,22 +215,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -299,11 +299,11 @@ export class GroupsStore extends BaseStore {
         super(db, 'groups')
     }
 &nbsp;
-    async insertGroups(groups) {
-        return this._executeTransaction('readwrite', async (store) =&gt; {
-            try {
-                groups.forEach((group) =&gt; store.add(group))
-                console.log('groups inserted successfully!')
+<span class="fstat-no" title="function not covered" >    async </span>insertGroups(groups) {
+<span class="cstat-no" title="statement not covered" >        return this._executeTransaction('readwrite', <span class="fstat-no" title="function not covered" >async </span>(store) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+<span class="cstat-no" title="statement not covered" >                groups.forEach(<span class="fstat-no" title="function not covered" >(g</span>roup) =&gt; <span class="cstat-no" title="statement not covered" >store.add(group))</span></span>
+<span class="cstat-no" title="statement not covered" >                console.log('groups inserted successfully!')</span>
             } catch (error) {
 <span class="cstat-no" title="statement not covered" >                console.error('Error inserting groups:', error)</span>
             }
@@ -311,15 +311,15 @@ export class GroupsStore extends BaseStore {
     }
 &nbsp;
 &nbsp;
-    async getGroups() {
-        return this._executeTransaction('readwrite', async (store) =&gt; {
-            try {
-                const request = store.getAll()
-                const groups = await new Promise((resolve, reject) =&gt; {
-                    request.onsuccess = () =&gt; resolve(request.result)
-                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error) </span>// Reject on error
+<span class="fstat-no" title="function not covered" >    async </span>getGroups() {
+<span class="cstat-no" title="statement not covered" >        return this._executeTransaction('readwrite', <span class="fstat-no" title="function not covered" >async </span>(store) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+                const request = <span class="cstat-no" title="statement not covered" >store.getAll()</span>
+                const groups = <span class="cstat-no" title="statement not covered" >await new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    request.onsuccess = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >resolve(request.result)</span></span>
+<span class="cstat-no" title="statement not covered" >                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error) </span></span>// Reject on error
                 })
-                return groups
+<span class="cstat-no" title="statement not covered" >                return groups</span>
             } catch (error) {
 <span class="cstat-no" title="statement not covered" >                throw new Error('Failed to get groups from indexed db: ' + error.message)</span>
             }
@@ -328,24 +328,24 @@ export class GroupsStore extends BaseStore {
 &nbsp;
 &nbsp;
 &nbsp;
-    async filterGroup(groupId) {
-        return this._executeTransaction('readwrite', async (store) =&gt; {
-            try {
-                const request = store.get(groupId)
-                const existingGroup = await new Promise((resolve, reject) =&gt; {
-                    request.onsuccess = () =&gt; resolve(request.result)
-                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span>
+<span class="fstat-no" title="function not covered" >    async </span>filterGroup(groupId) {
+<span class="cstat-no" title="statement not covered" >        return this._executeTransaction('readwrite', <span class="fstat-no" title="function not covered" >async </span>(store) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+                const request = <span class="cstat-no" title="statement not covered" >store.get(groupId)</span>
+                const existingGroup = <span class="cstat-no" title="statement not covered" >await new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    request.onsuccess = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >resolve(request.result)</span></span>
+<span class="cstat-no" title="statement not covered" >                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span></span>
                 })
 &nbsp;
-                if (existingGroup) {
-                    existingGroup.filter = true
-                    const updateRequest = store.put(existingGroup)
-                    await new Promise((resolve, reject) =&gt; {
-                        updateRequest.onsuccess = () =&gt; resolve()
-                        updateRequest.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(updateRequest.error)</span>
+<span class="cstat-no" title="statement not covered" >                if (existingGroup) {</span>
+<span class="cstat-no" title="statement not covered" >                    existingGroup.filtered = true</span>
+                    const updateRequest = <span class="cstat-no" title="statement not covered" >store.put(existingGroup)</span>
+<span class="cstat-no" title="statement not covered" >                    await new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                        updateRequest.onsuccess = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >resolve()</span></span>
+<span class="cstat-no" title="statement not covered" >                        updateRequest.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(updateRequest.error)</span></span>
                     })
-                    console.log(`Group with id ${groupId} was successfully filtered.`)
-                } else <span class="missing-if-branch" title="else path not taken" >E</span>{
+<span class="cstat-no" title="statement not covered" >                    console.log(`Group with id ${groupId} was successfully filtered.`)</span>
+                } else {
 <span class="cstat-no" title="statement not covered" >                    throw new Error(`Group with id ${groupId} not found.`)</span>
                 }
             } catch (error) {
@@ -363,7 +363,7 @@ export class GroupsStore extends BaseStore {
 <span class="cstat-no" title="statement not covered" >                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span></span>
                 })
 <span class="cstat-no" title="statement not covered" >                if (existingGroup) {</span>
-<span class="cstat-no" title="statement not covered" >                    existingGroup.filter = false</span>
+<span class="cstat-no" title="statement not covered" >                    existingGroup.filtered = false</span>
                     const updateRequest = <span class="cstat-no" title="statement not covered" >store.put(existingGroup)</span>
 <span class="cstat-no" title="statement not covered" >                    await new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                        updateRequest.onsuccess = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >resolve()</span></span>
@@ -412,7 +412,7 @@ export class GroupsStore extends BaseStore {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-23T16:52:20.761Z
+                at 2024-12-24T09:34:22.346Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

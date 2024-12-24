@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.56% </span>
+                <span class="strong">53.57% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>16/23</span>
+                <span class='fraction'>15/28</span>
             </div>
         
             
@@ -110,25 +110,14 @@
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">234x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">144x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,6 +130,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">86x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,9 +148,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import './LastMessage.css'
 import TextMessage from '../TextMessage/TextMessage'
 import ImageMessage from '../ImageMessage/ImageMessage'
@@ -167,6 +181,8 @@ import DeletedMessage from '../DeletedMessage/DeletedMessage'
 import DraftedMessage from '../DraftedMessage/DraftedMessage'
 import { useEffect } from 'react'
 import AwaitingJoinMessage from '../AwaitingJoinMessage/AwaitingJoinMessage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 &nbsp;
 const LastMessage = ({ myChat }) =&gt; {
 &nbsp;
@@ -174,16 +190,14 @@ const LastMessage = ({ myChat }) =&gt; {
     
     return (
         &lt;div className='last-message'&gt;
-            {myChat.drafted ? (
-<span class="branch-0 cbranch-no" title="branch not covered" >                &lt;DraftedMessage message={myChat.lastMessage} /&gt;</span>
+            {myChat.draftMessageContent &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >myChat.draftMessageContent.length &gt; 0 ? (</span>
+<span class="branch-0 cbranch-no" title="branch not covered" >                &lt;DraftedMessage message={myChat.draftMessageContent} /&gt;</span>
             ) : myChat.messageState === 3 ? (
 <span class="branch-0 cbranch-no" title="branch not covered" >                &lt;DeletedMessage sender={myChat.sender} /&gt; </span>
             ) : (
                 &lt;&gt;
-                    {myChat.messageType?.toLowerCase() === 'text'.toLowerCase() &amp;&amp; (
-                        &lt;TextMessage message={myChat.lastMessage} /&gt;
-                    )}
-                    {myChat.messageType?.toLowerCase() === 'image'.toLowerCase() &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;ImageMessage messageState={myChat.messageState} /&gt;}</span>
+                    
+                    {['jpeg', 'jpg', 'svg', 'png'].includes(myChat.attachmentName?.split('.').pop()?.toLowerCase()) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;ImageMessage messageState={myChat.messageState} /&gt;}</span>
                     {(myChat.messageType?.toLowerCase() === 'audio'.toLowerCase() ||
                         myChat.messageType?.toLowerCase() === 'voiceNote'.toLowerCase()) &amp;&amp; (
 <span class="branch-2 cbranch-no" title="branch not covered" >                        &lt;AudioVoiceNoteMessage</span>
@@ -192,10 +206,17 @@ const LastMessage = ({ myChat }) =&gt; {
                             message={myChat.lastMessage}
                         /&gt;
                     )}
-                    {myChat.messageType?.toLowerCase() === 'video'.toLowerCase() &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;VideoMessage messageState={myChat.messageState} /&gt;}</span>
+                    {['mp4', 'wav', 'svk','webm'].includes(myChat.attachmentName?.split('.').pop()?.toLowerCase()) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;VideoMessage messageState={myChat.messageState} /&gt;}</span>
                     {myChat.messageType?.toLowerCase() === 'sticker'.toLowerCase() &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;StickerMessage messageState={myChat.messageState} /&gt;}</span>
-                    {myChat.type == 'DM' &amp;&amp; myChat.participantKeys &amp;&amp; (!myChat.participantKeys[0] || !myChat.participantKeys[1]) &amp;&amp; (
-<span class="branch-4 cbranch-no" title="branch not covered" >                            &lt;AwaitingJoinMessage chat={myChat} /&gt;</span>
+                    {myChat.messageType?.toLowerCase() === 'text'.toLowerCase() &amp;&amp; (
+                        &lt;TextMessage message={myChat.lastMessage} /&gt;
+                    )}
+                    {myChat.messageType?.toLowerCase() === 'call'.toLowerCase() &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >&lt;span className='flex gap-2 items-baseline'&gt;</span>
+                        &lt;FontAwesomeIcon icon={faPhone} /&gt;
+                        {myChat.lastMessage}
+                    &lt;/span&gt;)}
+                    {myChat.type == 'DM' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >myChat.messageType == null &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >m</span>yChat.participantKeys &amp;&amp; (<span class="branch-3 cbranch-no" title="branch not covered" >!</span>myChat.participantKeys[0] || <span class="branch-4 cbranch-no" title="branch not covered" >!</span>myChat.participantKeys[1]) &amp;&amp; (</span>
+<span class="branch-5 cbranch-no" title="branch not covered" >                            &lt;AwaitingJoinMessage chat={myChat} /&gt;</span>
                         )}
                 &lt;/&gt;
             )}
@@ -211,7 +232,7 @@ export default LastMessage
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-23T18:05:05.462Z
+                at 2024-12-24T09:34:22.346Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

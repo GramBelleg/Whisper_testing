@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">72.72% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/11</span>
+                <span class='fraction'>3/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -117,20 +117,14 @@
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">208x</span>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">128x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">141x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,25 +162,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
 import CustomInput from '../../common/CustomInput'
 import CustomButton from '../../common/CustomButton'
 import ResendTimer from '../../common/ResendTimer'
 import ErrorMessage from '@/components/common/ErrorMessage'
 &nbsp;
-const VerifyEmail = ({ code, loading, handleChange, handleSubmit, error, codeError, resendCode, backToSignUp, canResend, timer }) =&gt; {
-    return (
+const VerifyEmail = <span class="fstat-no" title="function not covered" >({</span> code, loading, handleChange, handleSubmit, error, codeError, resendCode, backToSignUp, canResend, timer }) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return (</span>
         &lt;div className='flex flex-col justify-center items-center min-h-screen p-4'&gt;
             &lt;div className='w-full max-w-md mx-auto flex flex-col items-center justify-between p-4 bg-white rounded-lg shadow-md'&gt;
                 &lt;h1 className='text-xl font-semibold text-center text-primary mb-4'&gt;Account Verification&lt;/h1&gt;
                 &lt;p className='text-center mb-4'&gt;
                     Didn't receive the code?{' '}
                     &lt;span
-                        className={`text-primary underline cursor-pointer ${!canResend || <span class="branch-1 cbranch-no" title="branch not covered" >loading ? '</span>opacity-50 cursor-not-allowed' : <span class="branch-1 cbranch-no" title="branch not covered" >''}</span>`}
-                        onClick={canResend ? <span class="branch-0 cbranch-no" title="branch not covered" >resendCode : n</span>ull}
+                        className={`text-primary underline cursor-pointer ${!canResend || loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        onClick={canResend ? resendCode : null}
                         id='resend-verify-btn'
                     &gt;
                         Resend verification code
@@ -232,7 +232,7 @@ export default VerifyEmail
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-23T18:05:05.462Z
+                at 2024-12-24T09:34:22.346Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

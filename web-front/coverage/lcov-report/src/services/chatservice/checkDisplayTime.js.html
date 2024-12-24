@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.33% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/15</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.33% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/15</span>
+                <span class='fraction'>9/15</span>
             </div>
         
             
@@ -82,23 +82,23 @@
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const checkDisplayTime = (lastMessageTime) =&gt; {
@@ -107,17 +107,17 @@
     const lastMessageDate = new Date(lastMessageTime)
     const timeDiffInDays = Math.floor((today - lastMessageDate) / 86400000)
 &nbsp;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (timeDiffInDays === 0) {
-        const hours = <span class="cstat-no" title="statement not covered" >String(lastMessageDate.getHours()).padStart(2, '0') </span>// Two-digit hours
-        const minutes = <span class="cstat-no" title="statement not covered" >String(lastMessageDate.getMinutes()).padStart(2, '0') </span>// Two-digit minutes
-<span class="cstat-no" title="statement not covered" >        return `${hours}:${minutes}`</span>
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (timeDiffInDays === 1) {
+    if (timeDiffInDays === 0) {
+        const hours = String(lastMessageDate.getHours()).padStart(2, '0') // Two-digit hours
+        const minutes = String(lastMessageDate.getMinutes()).padStart(2, '0') // Two-digit minutes
+        return `${hours}:${minutes}`
+    } else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>if (timeDiffInDays === 1) {</span>
 <span class="cstat-no" title="statement not covered" >        return 'Yesterday'</span>
     } else {
-        const day = String(lastMessageDate.getDate()).padStart(2, '0')
-        const month = String(lastMessageDate.getMonth() + 1).padStart(2, '0')
-        const year = lastMessageDate.getFullYear()
-        return `${day}:${month}:${year}`
+        const day = <span class="cstat-no" title="statement not covered" >String(lastMessageDate.getDate()).padStart(2, '0')</span>
+        const month = <span class="cstat-no" title="statement not covered" >String(lastMessageDate.getMonth() + 1).padStart(2, '0')</span>
+        const year = <span class="cstat-no" title="statement not covered" >lastMessageDate.getFullYear()</span>
+<span class="cstat-no" title="statement not covered" >        return `${day}:${month}:${year}`</span>
     }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -127,7 +127,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-23T18:05:05.462Z
+                at 2024-12-24T09:34:22.346Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

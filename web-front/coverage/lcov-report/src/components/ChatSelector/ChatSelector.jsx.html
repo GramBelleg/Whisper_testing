@@ -152,23 +152,20 @@
 <a name='L87'></a><a href='#L87'>87</a>
 <a name='L88'></a><a href='#L88'>88</a>
 <a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">208x</span>
+<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">128x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -240,20 +237,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useEffect, useState } from 'react'<span class="branch-1 cbranch-no" title="branch not covered" ></span>
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faUsers } from '@fortawesome/free-solid-svg-icons'
-import useFetch from '@/services/useFetch'
-import { handleNoUserImage } from '@/services/chatservice/addDefaultImage'
 import './ChatSelector.css'
 import { useModal } from '@/contexts/ModalContext'
 import { getChatsCleaned } from '@/services/chatservice/getChats'
 &nbsp;
 const ChatSelector<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" > = <span class="fstat-no" title="function not covered" >(</span>{</span> onChatSelect, searchPlaceholder = <span class="branch-0 cbranch-no" title="branch not covered" >'Search chats...', r</span>enderCustomHeader, className = <span class="branch-0 cbranch-no" title="branch not covered" >'' }</span>) =&gt; <span class="cstat-no" title="statement not covered" >{</span></span>
-    const [filters, setFilters] = <span class="cstat-no" title="statement not covered" >useState({ keyword: '', usersOnly: 1, unblockedOnly: 1 })</span>
+    const [filters, setFilters] = <span class="cstat-no" title="statement not covered" >useState({ keyword: '', unblockedOnly: 1 })</span>
     const [chatList, setChatList] = <span class="cstat-no" title="statement not covered" >useState([])</span>
     const [loadingChats, setLoadingChats] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
     const [errorChats, setErrorChats] = <span class="cstat-no" title="statement not covered" >useState(null)</span>
@@ -282,9 +278,9 @@ const ChatSelector<span class="cstat-no" title="statement not covered" ><span cl
 &nbsp;
     const renderChatItem = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(c</span>hat, index) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        return (</span>
-            &lt;div key={index} className='chat-item' onClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >o</span>nChatSelect(chat)}&gt;</span>
+            &lt;div key={index} data-testid="chat-item" className='chat-item' onClick={<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" >o</span>nChatSelect(chat)}&gt;</span>
                 &lt;div className='chat-avatar'&gt;
-                    &lt;img src={chat.picture} alt={chat.name} onError={handleNoUserImage} /&gt;
+                    &lt;img src={chat.profilePic} alt={chat.name} /&gt;
                     {chat.group &amp;&amp; (
                         &lt;span className='group-indicator'&gt;
                             &lt;FontAwesomeIcon icon={faUsers} /&gt;
@@ -305,11 +301,12 @@ const ChatSelector<span class="cstat-no" title="statement not covered" ><span cl
         &lt;div className={`chat-selector ${className}`}&gt;
             {renderCustomHeader?.()}
             &lt;div className='search-container'&gt;
-                &lt;span className='close-icon'&gt;
+                &lt;span data-testid="close-modal" className='close-icon'&gt;
                     &lt;FontAwesomeIcon icon={faTimes} onClick={closeModal} /&gt;
                 &lt;/span&gt;
                 &lt;input
                     type='text'
+                    data-testid="search-input"
                     placeholder={searchPlaceholder}
                     value={filters.keyword}
                     onChange={handleSearch}
@@ -317,7 +314,7 @@ const ChatSelector<span class="cstat-no" title="statement not covered" ><span cl
                 /&gt;
             &lt;/div&gt;
 &nbsp;
-            &lt;div className='chats-container'&gt;
+            &lt;div className='chats-container' data-testid="chats-container"&gt;
                 {loadingChats ? (
                     &lt;div className='loading'&gt;Loading chats...&lt;/div&gt;
                 ) : errorChats ? (
@@ -340,7 +337,7 @@ export default ChatSelector
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-23T18:05:05.462Z
+                at 2024-12-24T09:34:22.346Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

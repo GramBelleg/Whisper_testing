@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.31% </span>
+                <span class="strong">6.06% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/95</span>
+                <span class='fraction'>6/99</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.3% </span>
+                <span class="strong">8.88% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/43</span>
+                <span class='fraction'>4/45</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5.55% </span>
+                <span class="strong">5.31% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/90</span>
+                <span class='fraction'>5/94</span>
             </div>
         
             
@@ -312,7 +312,13 @@
 <a name='L247'></a><a href='#L247'>247</a>
 <a name='L248'></a><a href='#L248'>248</a>
 <a name='L249'></a><a href='#L249'>249</a>
-<a name='L250'></a><a href='#L250'>250</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">208x</span>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">128x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -322,7 +328,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -334,8 +343,8 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -347,6 +356,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -427,6 +437,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -524,6 +535,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -558,9 +570,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useEffect, useRef, useState } from 'react'<span class="branch-1 cbranch-no" title="branch not covered" ></span>
 import './SingleStory.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -570,12 +582,13 @@ import ErrorMesssage from '../ErrorMessage/ErrorMessage'
 import { setStoryPrivacySettings } from '@/services/storiesservice/setStoryVisibility'
 import { useStories } from '@/contexts/StoryContext'
 import useAuth from '@/hooks/useAuth'
+import { useWhisperDB } from '@/contexts/WhisperDBContext'
 &nbsp;
 const SingleStory<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" > = <span class="fstat-no" title="function not covered" >(</span>{</span> onNextStory, handleAddNewStoryClick, onClose }) =&gt; <span class="cstat-no" title="statement not covered" >{</span></span>
     const { loading, error, currentStory, currentUser, isDeleteing, handleDeleteStory, sendLikeStory } = <span class="cstat-no" title="statement not covered" >useStories()</span>
     const [dropdownVisible, setDropdownVisible] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
     const [visibilityDropDownVisible, setVisibilityDropDownVisible] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
-    const [storyVisibility, setStoryVisibility] = <span class="cstat-no" title="statement not covered" >useState('Everyone')</span>
+    const [storyVisibility, setStoryVisibility] = <span class="cstat-no" title="statement not covered" >useState(currentStory ? currentStory.privacy : "Everyone")</span>
     const [isPaused, setIsPaused] = <span class="cstat-no" title="statement not covered" >useState(false)</span>
     const storyVisibilityChangedRef = <span class="cstat-no" title="statement not covered" >useRef(false)</span>
     const videoRef = <span class="cstat-no" title="statement not covered" >useRef()</span>
@@ -585,8 +598,10 @@ const SingleStory<span class="cstat-no" title="statement not covered" ><span cla
     const { openModal, closeModal } = <span class="cstat-no" title="statement not covered" >useModal()</span>
     const [remainingTime, setRemainingTime] = <span class="cstat-no" title="statement not covered" >useState(20000)</span>
     const { user } = <span class="cstat-no" title="statement not covered" >useAuth()</span>
+    const { dbRef } = <span class="cstat-no" title="statement not covered" >useWhisperDB()</span>
+    const storyVisRef = <span class="cstat-no" title="statement not covered" >useRef()</span>
 &nbsp;
-    const handleClickOutside = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>vent) =&gt; {</span>
+    const handleClickOutside = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async (e</span>vent) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (dropdownRef.current &amp;&amp; !dropdownRef.current.contains(event.target) &amp;&amp; !event.target.closest('.within-story-visibility')) {</span>
 <span class="cstat-no" title="statement not covered" >            setDropdownVisible(false)</span>
 <span class="cstat-no" title="statement not covered" >            setVisibilityDropDownVisible(false)</span>
@@ -595,7 +610,8 @@ const SingleStory<span class="cstat-no" title="statement not covered" ><span cla
 &nbsp;
 <span class="cstat-no" title="statement not covered" >            <span class="missing-if-branch" title="if path not taken" >I</span>if (storyVisibilityChangedRef.current === true) {</span>
 <span class="cstat-no" title="statement not covered" >                try {</span>
-<span class="cstat-no" title="statement not covered" >                    setStoryPrivacySettings(currentStory?.id, storyVisibility)</span>
+<span class="cstat-no" title="statement not covered" >                    await setStoryPrivacySettings(currentStory?.id, storyVisRef.current)</span>
+<span class="cstat-no" title="statement not covered" >                    await dbRef.current.updateStoryVisibility(currentStory?.id, storyVisRef.current)</span>
                 } catch (error) {
 <span class="cstat-no" title="statement not covered" >                    openModal(&lt;ErrorMesssage errorMessage={error.message} onClose={closeModal} appearFor={3000} /&gt;)</span>
 <span class="cstat-no" title="statement not covered" >                    setTimeout(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
@@ -676,12 +692,13 @@ const SingleStory<span class="cstat-no" title="statement not covered" ><span cla
     const handleVisibilityChange = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        setStoryVisibility(value)</span>
 <span class="cstat-no" title="statement not covered" >        storyVisibilityChangedRef.current = true</span>
+<span class="cstat-no" title="statement not covered" >        storyVisRef.current = value</span>
     }
 &nbsp;
     const renderContent = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
 <span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (loading || isDeleteing) {</span>
 <span class="cstat-no" title="statement not covered" >            return (</span>
-                &lt;div className='flex items-center justify-center w-full h-full'&gt;
+                &lt;div data-testid="loading-spinner" className='flex items-center justify-center w-full h-full'&gt;
                     &lt;div className='animate-spin rounded-full h-8 w-8 border-b-2 border-white' /&gt;
                 &lt;/div&gt;
             )
@@ -784,6 +801,7 @@ const SingleStory<span class="cstat-no" title="statement not covered" ><span cla
             &lt;div className='story-content'&gt;
                 &lt;div className={`likes ${currentStory?.liked ? 'liked' : ''}`}&gt;
                     &lt;FontAwesomeIcon
+                        data-testid="icon-heart"
                         icon={faHeart}
                         className='h-6 w-6'
                         onClick={
@@ -817,7 +835,7 @@ export default SingleStory
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-23T18:05:05.462Z
+                at 2024-12-24T09:34:22.346Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
