@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">2.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/40</span>
+                <span class='fraction'>1/40</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">26.31% </span>
+                <span class="strong">5.26% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/19</span>
+                <span class='fraction'>1/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">26.47% </span>
+                <span class="strong">2.94% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/34</span>
+                <span class='fraction'>1/34</span>
             </div>
         
             
@@ -149,7 +149,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -210,15 +210,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -290,16 +290,16 @@ export class PinnedMessagesStore extends BaseStore {
         })
     }
 &nbsp;
-    async getPinnedMessagesForChat(chatId) {
-        return this._executeTransaction('readonly', async (store) =&gt; {
-            try {
-                const index = store.index('chatId')
-                const request = index.getAll(chatId)
-                const messages = await new Promise((resolve, reject) =&gt; {
-                    request.onsuccess = () =&gt; resolve(request.result)
-                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span>
+<span class="fstat-no" title="function not covered" >    async </span>getPinnedMessagesForChat(chatId) {
+<span class="cstat-no" title="statement not covered" >        return this._executeTransaction('readonly', <span class="fstat-no" title="function not covered" >async </span>(store) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+                const index = <span class="cstat-no" title="statement not covered" >store.index('chatId')</span>
+                const request = <span class="cstat-no" title="statement not covered" >index.getAll(chatId)</span>
+                const messages = <span class="cstat-no" title="statement not covered" >await new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                    request.onsuccess = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >resolve(request.result)</span></span>
+<span class="cstat-no" title="statement not covered" >                    request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span></span>
                 })
-                return messages.reverse()
+<span class="cstat-no" title="statement not covered" >                return messages.reverse()</span>
             } catch (error) {
 <span class="cstat-no" title="statement not covered" >                throw new Error('Failed to get messages from indexed db: ' + error.message)</span>
             }
@@ -313,7 +313,7 @@ export class PinnedMessagesStore extends BaseStore {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-24T09:34:22.346Z
+                at 2024-12-24T09:40:30.074Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.77% </span>
+                <span class="strong">44.44% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/9</span>
+                <span class='fraction'>4/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.36% </span>
+                <span class="strong">27.27% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/11</span>
+                <span class='fraction'>3/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">77.77% </span>
+                <span class="strong">44.44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/9</span>
+                <span class='fraction'>4/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -104,11 +104,11 @@
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
 <a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">128x</span>
+<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">152x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-yes">58x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -124,7 +124,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">58x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,15 +141,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">58x</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import NoProfile from '@/assets/images/no-profile.svg?react'
 import { messageTypes } from '@/services/sendTypeEnum'
 &nbsp;
-const MessageRelationshipsViewer = ({ message }) =&gt; {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (message.forwarded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >message.forwardedFrom) {</span>
+const MessageRelationshipsViewer = <span class="fstat-no" title="function not covered" >({</span> message }) =&gt; {
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (message.forwarded &amp;&amp; message.forwardedFrom) {</span>
 <span class="cstat-no" title="statement not covered" >        return (</span>
             &lt;div className='flex flex-col mb-2 mr-4 text-sm text-left'&gt;
                 &lt;span&gt;Forwarded From&lt;/span&gt;
@@ -165,7 +165,7 @@ const MessageRelationshipsViewer = ({ message }) =&gt; {
         )
     }
 &nbsp;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (message.parentMessage) {
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (message.parentMessage) {</span>
 <span class="cstat-no" title="statement not covered" >        return (</span>
             &lt;div className='mb-2 hover:bg-opacity-30 cursor-pointer flex flex-col rounded-lg p-1 border-l-4 border-white bg-white bg-opacity-20 text-left'&gt;
                 &lt;span className='relationship-text'&gt;{message.parentMessage.senderName}&lt;/span&gt;
@@ -182,7 +182,7 @@ const MessageRelationshipsViewer = ({ message }) =&gt; {
         )
     }
 &nbsp;
-    return null
+<span class="cstat-no" title="statement not covered" >    return null</span>
 }
 &nbsp;
 export default MessageRelationshipsViewer
@@ -193,7 +193,7 @@ export default MessageRelationshipsViewer
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-24T09:34:22.346Z
+                at 2024-12-24T09:40:30.074Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">8.33% </span>
+                <span class="strong">4.62% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/216</span>
+                <span class='fraction'>10/216</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.41% </span>
+                <span class="strong">6.25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>10/96</span>
+                <span class='fraction'>6/96</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.24% </span>
+                <span class="strong">5.2% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/173</span>
+                <span class='fraction'>9/173</span>
             </div>
         
             
@@ -371,20 +371,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">31x</span>
-<span class="cline-any cline-yes">209x</span>
-<span class="cline-any cline-yes">209x</span>
-<span class="cline-any cline-yes">209x</span>
-<span class="cline-any cline-yes">209x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -392,14 +392,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -694,15 +694,15 @@ export class MessagesStore extends BaseStore {
         })
     }
 &nbsp;
-    async getMessagesForChat(chatId) {
-        return this._executeTransaction('readonly', async (store) =&gt; {
-            const index = store.index('chatId')
-            const request = index.getAll(chatId)
-            const messages = await new Promise((resolve, reject) =&gt; {
-                request.onsuccess = () =&gt; resolve(request.result)
-                request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span>
+<span class="fstat-no" title="function not covered" >    async </span>getMessagesForChat(chatId) {
+<span class="cstat-no" title="statement not covered" >        return this._executeTransaction('readonly', <span class="fstat-no" title="function not covered" >async </span>(store) =&gt; {</span>
+            const index = <span class="cstat-no" title="statement not covered" >store.index('chatId')</span>
+            const request = <span class="cstat-no" title="statement not covered" >index.getAll(chatId)</span>
+            const messages = <span class="cstat-no" title="statement not covered" >await new Promise(<span class="fstat-no" title="function not covered" >(r</span>esolve, reject) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                request.onsuccess = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >resolve(request.result)</span></span>
+<span class="cstat-no" title="statement not covered" >                request.onerror = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >reject(request.error)</span></span>
             })
-            return messages.reverse()
+<span class="cstat-no" title="statement not covered" >            return messages.reverse()</span>
         })
     }
 &nbsp;
@@ -979,7 +979,7 @@ export class MessagesStore extends BaseStore {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-24T09:34:22.346Z
+                at 2024-12-24T09:40:30.074Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
