@@ -17,6 +17,12 @@
         "name": "moataz",
         "password": "Abcdefgh12#"
     },
+    "user4": {
+      "email": "eli.collins@hotmail.com",
+      "username": "cletus_willms0",
+      "name": "arlene wolff",
+      "password": "Abcdefgh12#"
+  },
     "user_admin": {
         "email": "admin@admin.com",
         "password": "Abcdefgh12#"
