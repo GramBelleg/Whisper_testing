@@ -25,55 +25,36 @@ describe('Groups chat', () => {
     const message = Math.random().toString(36).substring(2, 60);
     const group_name = Math.random().toString(36).substring(2, 30);
 
-    // it('creating a group', () => {
-    //   const group_name = Math.random().toString(36).substring(2, 30);
+    it('creating a group', () => {
+      const group_name = Math.random().toString(36).substring(2, 30);
 
-    //   cy.get('.add-new-button').click();
-    //   cy.contains('New Group').click();
-    //   cy.get('.user-list > :nth-child(1)').click();
-    //   cy.get('.user-list > :nth-child(2)').click();
-    //   cy.get('.forward-icon').click();
-    //   cy.get('#_24x24_On_Light_Edit').click();
-    //   cy.get('[data-testid="bio"]').type(group_name);
-    //   cy.get('[data-testid="button-save-edit"]').click();
-    //   cy.get('.forward-icon').click();
-    //   cy.get('.chat-list')
-    //   .contains(group_name).should('exist');
-    // });
+      cy.get('.add-new-button').click();
+      cy.contains('New Group').click();
+      cy.get('.user-list > :nth-child(1)').click();
+      cy.get('.user-list > :nth-child(2)').click();
+      cy.get('.forward-icon').click();
+      cy.get('#_24x24_On_Light_Edit').click();
+      cy.get('[data-testid="bio"]').type(group_name);
+      cy.get('[data-testid="button-save-edit"]').click();
+      cy.get('.forward-icon').click();
+      cy.get('.chat-list')
+      .contains(group_name).should('exist');
+    });
 
-    // it('creating a DUPLICATE group', () => {
-    //   cy.createGroup(group_name);
-    //   cy.reload();
-    //   cy.createGroup(group_name);
-    //   cy.wait(2000)
-    //   cy.get('.chat-list')
-    //   .find('.user-name   ')
-    //   .filter((_, el) => el.textContent === group_name)
-    //   .should('have.length', 1);
-    // });
+    it('creating a DUPLICATE group', () => {
+      cy.createGroup(group_name);
+      cy.reload();
+      cy.createGroup(group_name);
+      cy.wait(2000)
+      cy.get('.chat-list')
+      .find('.user-name   ')
+      .filter((_, el) => el.textContent === group_name)
+      .should('have.length', 1);
+    });
 
-    // it('send messages and be recieved', () => {
-    //   cy.contains('bahebak').click();
-    //   cy.wait(3000) // they told me so, i am done with this already
-    //   cy.get('[data-testid="text-input"]').type(message);
-    //   cy.get('.voice-send-container').click();
-
-    //   cy.Logout();
-
-    //   cy.get("#email").type(users.user2.email);
-    //   cy.get("#password").type(users.user2.password);
-    //   cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
-    //   cy.url().should('eq','http://localhost:5173/');
-    //   cy.contains('bahebak').click();
-    //   cy.contains(message).should("be.visible");
-    // });
-
-    it('send files and be recieved', () => {
+    it('send messages and be recieved', () => {
       cy.contains('bahebak').click();
-      cy.get('[data-testid="attach-icon"]').click();
-      const filePath = "cypress/fixtures/test_image.jpg";
-      cy.get('[data-testid="attach-menu"] > :nth-child(2)').click().selectFile(filePath, { force: true });;
-      cy.wait(300000) // they told me so, i am done with this already
+      cy.wait(3000) // they told me so, i am done with this already
       cy.get('[data-testid="text-input"]').type(message);
       cy.get('.voice-send-container').click();
 
@@ -81,11 +62,48 @@ describe('Groups chat', () => {
 
       cy.get("#email").type(users.user2.email);
       cy.get("#password").type(users.user2.password);
-      cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
+      cy.get("#login-btn").click(); 
       cy.url().should('eq','http://localhost:5173/');
       cy.contains('bahebak').click();
       cy.contains(message).should("be.visible");
     });
+
+    // it('send files and be recieved', () => {
+    //   cy.contains('bahebak').click();
+    //   cy.get('[data-testid="attach-icon"]').click();
+    //   const filePath = "cypress/fixtures/test_image.jpg";
+    //   cy.get('[data-testid="attach-menu"] > :nth-child(2)').selectFile(filePath, { force: true });
+    //   cy.get('.voice-send-container').click();
+
+    //   cy.get('.image-container img')
+    //   .invoke('attr', 'src')
+    //   .then((src) => {
+
+    //     cy.log('Image src:', src);
+        
+    //     cy.Logout();
+
+    //     cy.get("#email").type(users.user2.email);
+    //     cy.get("#password").type(users.user2.password);
+    //     cy.get("#login-btn").click(); 
+    //     cy.url().should('eq','http://localhost:5173/');
+    //     cy.contains('bahebak').click();
+    //     cy.get('.image-container img')
+    //     .invoke('attr', 'src')
+    //     .then((src_) => {
+    //       if (src_ !== src) {
+    //         cy.screenshot();
+    //         throw new Error('image didnt deliver !');
+    //       } else {
+    //         expect(value.length).to.be.lessThan(500);
+    //       }
+    //     });
+
+    //   });
+
+
+
+    // });
 
 
     

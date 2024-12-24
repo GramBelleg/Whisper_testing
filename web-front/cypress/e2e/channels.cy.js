@@ -137,7 +137,7 @@ describe('channels', () => {
 
       cy.Logout();
 
-      cy.Login(WUT, "alia29@hotmail.com", users.user2.password);
+      cy.Login(WUT, users.user2.email, users.user2.password);
       cy.get('.chat-list')
       .contains(channel_name).should('exist');
     });
