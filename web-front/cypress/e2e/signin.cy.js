@@ -1,5 +1,14 @@
 describe('Sign in tests', () => {
   const WUT = "http://localhost:5173/login" // website under test
+
+  let users
+
+
+  before(() => {
+    cy.fixture('users').then((data) => {
+      users = data;
+    });
+  });
   
   describe('Wrong sign-in formats', () => {
 
@@ -12,7 +21,7 @@ describe('Sign in tests', () => {
     
     it('Wrong short password', { timeout: 10000 },() => {
       cy.visit(WUT);
-      cy.get("#email").type("grambell.whisper@gmail.com");
+      cy.get("#email").type(users.user1.email);
       cy.get("#password").type("wrong1");
       cy.get("#login-btn").click();
       cy.get("#error-password").contains("Password must be at least 8 characters")
@@ -81,7 +90,7 @@ describe('Sign in tests', () => {
     })
     it('email case sensitivity', { timeout: 10000 }, () => {
       cy.visit(WUT);
-      cy.get("#email").type("Grambell.Whisper@gmail.com");
+      cy.get("#email").type(users.user1.email);
       cy.get("#password").type("correctPassword1");
       cy.get("#login-btn").click();
       cy.get("#error-email").should('not.exist');
@@ -106,8 +115,8 @@ describe('Sign in tests', () => {
       cy.get("#password").type("short");
       cy.get("#login-btn").click();
       cy.get("#error-email").should('exist');
-      cy.get("#email").clear().type("grambell.whisper@gmail.com");
-      cy.get("#password").clear().type("12345678kK");
+      cy.get("#email").clear().type(users.user1.email);
+      cy.get("#password").clear().type(users.user1.password);
       cy.get("#login-btn").click();
       cy.get("#error-email").should('not.exist');
       cy.get("#error-password").should('not.exist');
@@ -119,7 +128,7 @@ describe('Sign in tests', () => {
   describe('missing sign in fields', () => {
     it('email with no password', { timeout: 10000 },() => {
       cy.visit(WUT);
-      cy.get("#email").type("grambell.whisper@gmail.com");
+      cy.get("#email").type(users.user1.email);
       cy.get("#login-btn").click();
       cy.get("#error-password").contains("Password is required")
     })
@@ -142,7 +151,7 @@ describe('Sign in tests', () => {
 
     it('Wrong password', { timeout: 10000 },() => {
       cy.visit(WUT);
-      cy.get("#email").type("grambell.whisper@gmail.com");
+      cy.get("#email").type(users.user1.email);
       cy.get("#password").type("wrongggggg1");
       cy.get("#login-btn").click();
     })
@@ -151,16 +160,16 @@ describe('Sign in tests', () => {
   describe('correct sign in', () => {
     it('sign in', { timeout: 10000 },() => {
       cy.visit(WUT);
-      cy.get("#email").type("grambell.whisper@gmail.com");
-      cy.get("#password").type("12345678kK");
+      cy.get("#email").type(users.user1.email);
+      cy.get("#password").type(users.user1.password);
       cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
       cy.url().should('eq','http://localhost:5173/');
     })
 
     it('sign out', { timeout: 10000 },() => {
       cy.visit(WUT);
-      cy.get("#email").type("grambell.whisper@gmail.com");
-      cy.get("#password").type("12345678kK");
+      cy.get("#email").type(users.user1.email);
+      cy.get("#password").type(users.user1.password);
       cy.get("#login-btn").click(); // TODO CHECK IF LOGGED IN SUCCESSFULLY
       cy.url().should('eq','http://localhost:5173/');
       cy.get('[data-testid="logout-icon"]').click();
